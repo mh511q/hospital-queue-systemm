@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صفحة الاستقبال</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <div class="container">
+    <h1>الاستقبال - تسجيل المرضى</h1>
+    <div id="clinics-list" class="clinics-list"></div>
+    <form id="register-form">
+      <label for="clinic-select">اختر العيادة:</label>
+      <select id="clinic-select" required></select>
+      <button type="submit">تسجيل مريض جديد</button>
+    </form>
+    <div class="serial-section">
+      <span>الرقم التسلسلي الحالي: <span id="current-serial">1</span></span>
+      <button id="reset-serial">ريستارت الرقم</button>
+    </div>
+    <div class="actions">
+      <button id="print-btn">طباعة</button>
+      <a href="display.html" class="action-link">عرض قائمة المرضى</a>
+      <a href="clinic-login.html" class="action-link">تسجيل دخول العيادة</a>
+    </div>
+  </div>
+      <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src="firebase-config.js"></script>
+  
+  <script src="main.js"></script>
+</body>
+</html> 
