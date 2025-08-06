@@ -1,10 +1,21 @@
-// تعريف العيادات وبيانات تسجيل الدخول
+// تعريف العيادات وبيانات تسجيل الدخول (مشفرة)
 const CLINICS = [
-  { id: 1, name: 'عيادة 1', username: 'clinic1', password: '12345' },
-  { id: 2, name: 'عيادة 2', username: 'clinic2', password: '12345' },
-  { id: 3, name: 'عيادة 3', username: 'clinic3', password: '12345' },
+  { id: 1, name: 'عيادة 1', username: 'Y2xpbmljMQ==', password: 'MTIzNDU=' },
+  { id: 2, name: 'عيادة 2', username: 'Y2xpbmljMg==', password: 'MTIzNDU=' },
+  { id: 3, name: 'عيادة 3', username: 'Y2xpbmljMw==', password: 'MTIzNDU=' },
 ];
 
+
+function decodeBase64(str) 
+{
+  try 
+  {
+    return atob(str);
+  } catch (e) 
+  {
+    return str;  
+  }
+}
 
 
 // -----------------------------------------------------------
@@ -134,7 +145,7 @@ if (document.body.contains(document.getElementById('clinic-login-form')) && data
     const password = document.getElementById('password').value;
     const errorDiv = document.getElementById('login-error');
     
-    const clinic = CLINICS.find(c => c.username === username && c.password === password);
+    const clinic = CLINICS.find(c => decodeBase64(c.username) === username && decodeBase64(c.password) === password);
     
     if (clinic) {
       database.ref('clinicsStatus/' + clinic.id).set(true)

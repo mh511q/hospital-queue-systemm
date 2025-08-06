@@ -7,23 +7,24 @@
   <link rel="stylesheet" href="style.css">
 
 </head>
-<body>
+<body style="font-weight: bold;">
   <div class="container">
     <h1>الاستقبال - تسجيل المرضى</h1>
     <div id="clinics-list" class="clinics-list"></div>
     <form id="register-form">
       <label for="clinic-select">اختر العيادة:</label>
       <select id="clinic-select" required></select>
-      <button type="submit">تسجيل مريض جديد</button>
+      <button type="submit" style="    border-radius: 15px;
+    padding: 7px;">تسجيل مريض جديد</button>
     </form>
     <div class="serial-section">
       <span>الرقم التسلسلي الحالي: <span id="current-serial">1</span></span>
-      <button id="reset-serial">ريستارت الرقم</button>
+      <button id="reset-serial" style="padding: 10px; border-radius: 15px; padding: 7px;">ريستارت الرقم</button>
     </div>
     <div class="actions">
       <button id="print-btn">طباعة</button>
-      <a href="display.html" class="action-link">عرض قائمة المرضى</a>
-      <a href="clinic-login.html" class="action-link">تسجيل دخول العيادة</a>
+      <a href="display.html" class="action-link" style="padding: 10px; border-radius: 15px; padding: 7px;">عرض قائمة المرضى</a>
+      <a href="clinic-login.html" class="action-link" style="padding: 10px; border-radius: 15px; padding: 7px;">تسجيل دخول العيادة</a>
     </div>
   </div>
       <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
