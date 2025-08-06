@@ -1,7 +1,7 @@
 // firebase-config.js
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD16e4v3jyx9LPCIZYGETtv2F8JhCweSTk",
+  apiKey: "AIzaSyDsmKqjsQHzrdGMqn14uX5JM4dLuP0bvfg",
   authDomain: "baqaa-hospital.firebaseapp.com",
   databaseURL: "https://baqaa-hospital-default-rtdb.firebaseio.com",
   projectId: "baqaa-hospital",
